@@ -1,20 +1,29 @@
-import wx
+from tkinter import Tk
+from tkinter.filedialog import askopenfilenames
 import eel
+from PIL import Image
+from PIL import ExifTags
+from GPSPhoto import gpsphoto
 
 eel.init('web')
 
 
 @eel.expose
-def pythonFunction(wildcard="*"):
-    app = wx.App(None)
-    style = wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
-    dialog = wx.FileDialog(None, 'Open', wildcard=wildcard, style=style)
-    if dialog.ShowModal() == wx.ID_OK:
-        path = dialog.GetPath()
-    else:
-        path = None
-    dialog.Destroy()
-    return path
+def pythonFunction():
+    root = Tk()
+    root.withdraw()
+    filename = askopenfilenames(filetypes=[("Фотографии", "*.jpg")])
+    root.quit()
+
+    datas = []
+    for file in filename:
+        data = gpsphoto.getGPSData(file)
+        gps = []
+        for tag in data.keys():
+            if tag == 'Latitude' or tag == 'Longitude':
+                gps.append(data[tag])
+        datas.append(gps)
+    return datas
 
 
 eel.start('index.html', size=(1600, 900))
