@@ -63,17 +63,18 @@
             });
         }
         function getPathToFile() {
-            eel.pythonFunction()(r => {
-                var arr = new ymaps.GeoObjectCollection();
-                for (let i = 0; i < r.length; i++) {
-                    arr.add(new ymaps.Placemark([r[i][0], r[i][1]], {
-                        balloonContent: 'цвет <strong>влюбленной жабы</strong>'
-                    }, {
-                        preset: 'islands#blueCircleDotIcon',
-                    }));
-
-                }
-                myMap.geoObjects.add(arr);
+            eel.addToDB()(r => {
+                console.log(r)
+                // var arr = new ymaps.GeoObjectCollection();
+                // for (let i = 0; i < r.length; i++) {
+                //     arr.add(new ymaps.Placemark([r[i][1], r[i][2]], {
+                //         balloonContent: r[i][0]
+                //     }, {
+                //         preset: 'islands#blueCircleDotIcon',
+                //     }));
+                //
+                // }
+                // myMap.geoObjects.add(arr);
             })
         }
     </script>
