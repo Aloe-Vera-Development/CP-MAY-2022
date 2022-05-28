@@ -6,8 +6,8 @@
   --pop-up-add-butt: #e6e6e6;
   --shadow-color: rgba(0, 0, 0, 0.322);
   --button-hover-color: #818181;
-  --button-hover-color-card-cross: #818181;
-  --button-hover-color-card-more: #818181;
+  --button-hover-color-card-cross: #e1e1e1;
+  --button-hover-color-card-more: #e1e1e1;
 }
 
 .flex-start {
@@ -19,7 +19,16 @@
 }
 
 .button-hover:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-hover-color-card-more);
+}
+
+
+.more-photos{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
 }
 
 /*left*/
@@ -45,14 +54,9 @@
   width: inherit;
   height: 510px;
   overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-x: hidden;
 }
 
-.photos-content::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
 
 .card-photo {
   background-color: var(--card-photo-backgorund-color);
@@ -89,6 +93,7 @@
 }
 
 .photos-img {
+  position: relative;
   width: 160px;
   height: 160px;
   border-radius: 20px;
@@ -102,15 +107,7 @@
 
 .button-next {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-  width: inherit;
-  height: 64px;
   background-color: var(--button-card-backgrund-color);
-  border-radius: 20px;
 }
 
 .svg_button {
@@ -135,11 +132,16 @@
   align-items: center;
 }
 
+.content2{
+  margin-top: 0px;
+}
+
 /*pop-up*/
 
 .pop-up-wrapper {
   position: absolute;
-
+  top: 140px;
+  left:  90px;
   width: 1326px;
   height: 658px;
   background-color: var(--pop-up-backgorund-color);
@@ -152,6 +154,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.down-text span:hover{
+  color: var(--different-text-color);
+}
+
+.down-text{
+  margin-top: 35px;
+  width: inherit;
+  text-align: center;
 }
 
 .svg-div {
@@ -168,6 +180,15 @@
 .exit-cross {
   width: 45px;
   height: 45px;
+}
+
+.text-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 595.5px;
+  height: 160px;
+  justify-content: start;
+  align-items: baseline
 }
 
 .button-exit-cross {
@@ -290,6 +311,7 @@
 .more-svg-div {
   width: 48px;
   height: 48px;
+  
 }
 
 .more:hover {
@@ -297,9 +319,11 @@
 }
 
 .more {
+  margin-left: 139px;
   transition: background-color ease-in-out 0.2s;
   border-radius: 16px;
-  padding: 3px;
+  padding-left: 12px;
+  padding-right: 12spx;
 }
 
 .more-svg {
@@ -324,4 +348,15 @@
   width: inherit;
   height: inherit;
   background: url(../img/crossCardSvg.svg);
+}
+
+
+.white-text-color{
+  color: white;
+}
+
+.more-photos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

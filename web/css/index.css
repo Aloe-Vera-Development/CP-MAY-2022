@@ -86,6 +86,7 @@ button {
   margin-top: 135px;
 }
 
+
 /*левая сторона*/
 .content_formats {
   width: 580px;
@@ -159,7 +160,7 @@ button {
   justify-content: center;
 }
 
-.button_choose_photo:hover{
+.button_choose_photo_hover:hover{
   -webkit-box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
 -moz-box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
 box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
@@ -272,6 +273,14 @@ box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
+  line-height: 133.02%;
+}
+
+.medium-48-title{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
   line-height: 133.02%;
 }
 

@@ -64,3 +64,12 @@
 .disactive-more-photos{
     display: none;
 }
+
+.arrow{
+    text-align: center;
+    margin-top: 34px;
+}
+
+.arrow span:hover{
+    color: var(--different-text-color);
+}
