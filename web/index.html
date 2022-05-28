@@ -8,47 +8,42 @@
     <title>Мой морж</title>
 </head>
 <body>
-    <h1>Gay</h1>
-    <button type="button" onclick="getPathToFile()">Select File</button>
+    <h1>Loh</h1>
+    <canvas id="myChart" width="1000" height="600"></canvas>
+    <button type="button" onclick="getPathToFile()">Выбрать файл</button>
     <div id="map" style="width: 600px; height: 400px"></div>
-    <canvas id="myChart" width="600" height="400"></canvas>
 
     <script>
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['2019:09:17 15:21:43', '2019:09:18 15:21:43', '2019:09:20 15:21:43', ],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
+                label: 'Популяция моржей',
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgb(75, 192, 192)',
+                data: [1, 5, 3],
+                lineTension: 0.5
             }]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+            responsive: true,
+            plugins: {
+              filler: {
+                propagate: false,
+              },
+              title: {
+                display: true,
+              }
+            },
+            interaction: {
+              intersect: false,
             }
-        }
+          },
     });
+    myChart.canvas.parentNode.style.height = '1000px';
+    myChart.canvas.parentNode.style.width = '600px';
     </script>
 
     <script type="text/javascript">
@@ -56,11 +51,28 @@
         var myMap;
         function init(){
             myMap = new ymaps.Map("map", {
-                center: [68.574112, 53.052762],
-                zoom: 8,
+                center: [69.465028, 58.533478],
+                zoom: 12,
                 type: 'yandex#hybrid',
                 controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
             });
+            eel.getLastData()(r => {
+                console.log(r)
+                var arr = [];
+                for (let i = 0; i < r.length; i++) {
+                    var title = '<b style="font-size: 18px">' + r[i][1] + ' моржей</b><br>Дата: ' + r[i][3].split(' ')[0].replaceAll(':', '.') + '<br>Снято на: ' + r[i][6] + '<br><a href="#">Детальная страница</a>';
+                    arr[i] = new ymaps.Placemark([r[i][4], r[i][5]], {
+                        clusterCaption: 'Фотография '+(i+1),
+                        balloonContent: title
+                    }, {
+                        preset: 'islands#blueCircleDotIcon',
+                    });
+                }
+
+                var myClusterer = new ymaps.Clusterer();
+                myClusterer.add(arr);
+                myMap.geoObjects.add(myClusterer);
+            })
         }
         function getPathToFile() {
             eel.addToDB()(r => {

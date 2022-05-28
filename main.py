@@ -10,6 +10,7 @@ import shutil
 
 eel.init('web')
 
+
 def connectToDB():
     conn = sqlite3.connect(r"db.db")
     return conn
@@ -29,19 +30,21 @@ def init():
     )""")
 
 
-def selectAllData():
+def getAllData(last=50):
     try:
         conn = connectToDB()
         c = conn.cursor()
-        recs = c.execute("SELECT * FROM datas")
+        recs = c.execute("SELECT * FROM datas ORDER BY id DESC LIMIT " + str(last))
+        rows = []
         for row in recs:
-            print(row)
+            rows.append(row)
+        return rows
     except:
         init()
-        selectAllData()
+        getAllData()
 
 
-def selectDataById(id):
+def getDataById(id):
     try:
         conn = connectToDB()
         c = conn.cursor()
@@ -50,20 +53,19 @@ def selectDataById(id):
             print(row)
     except:
         init()
-        selectDataById(id)
+        getAllData(id)
 
 
 def addData(data):
     try:
         conn = connectToDB()
         c = conn.cursor()
-        c.execute("INSERT INTO datas (photo, n, date, lat, long, model) VALUES ('" + data['photo'] + "', '" + str(data['n']) + "', '" + data['date'] + "', '" + data['lat'] + "', '" + data['long'] + "', '" + data['model'] + "')")
+        c.execute("INSERT INTO datas (photo, n, date, lat, long, model) VALUES ('" + data['photo'] + "', '" + str(
+            data['n']) + "', '" + data['date'] + "', '" + data['lat'] + "', '" + data['long'] + "', '" + data[
+                      'model'] + "')")
         conn.commit()
     except:
         init()
-
-
-selectAllData()
 
 
 @eel.expose
@@ -88,7 +90,7 @@ def addToDB():
         d.update({'model': model})
 
         shutil.copy2(file, 'photos/')
-        d.update({'photo': 'photos/'+file.split('/')[-1]})
+        d.update({'photo': 'photos/' + file.split('/')[-1]})
 
         data = gpsphoto.getGPSData(file)
         for tag in data.keys():
@@ -101,6 +103,13 @@ def addToDB():
 
         print(d)
     return d
+
+
+@eel.expose
+def getLastData():
+    datas = getAllData()
+    print(datas)
+    return datas
 
 
 eel.start('index.html', size=(1600, 900))
