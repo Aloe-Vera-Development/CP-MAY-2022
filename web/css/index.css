@@ -1,0 +1,269 @@
+:root {
+  --text-color: black;
+  --text-color-small-button: #ffffff;
+  --tag-background-color: #ededed;
+  --button-backgound-color: #e9e9e9;
+  --button-small-backgound-color: #000;
+  --grey-text-color: #aeaeae;
+  --pop-up-backgorund-color: white;
+}
+
+body {
+  margin: 0%;
+  padding: 0%s;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+button {
+  border: none;
+}
+
+/*хедере*/
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: auto;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0px 250px 0px 135px;
+  padding: 0;
+  min-width: 700px;
+  max-width: 1000px;
+  height: 29px;
+}
+
+.nav_link {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  transition: background-color ease-in-out 0.2s;
+  margin-right: 28px;
+}
+
+.nav_link:hover {
+  background-color: var(--tag-background-color);
+}
+
+.progammName {
+  width: 167px;
+  height: 45px;
+  left: 1296px;
+  top: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  align-self: flex-end;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 160px 0px 0px 135px;
+}
+
+/*левая сторона*/
+
+.content {
+  margin-right: 198px;
+}
+
+.content_formats {
+  width: 654px;
+  height: 341px;
+}
+
+.mainTitle {
+  width: 657px;
+  height: 140px;
+}
+
+.secondTitle {
+  margin-top: 20px;
+  width: 508px;
+  height: 86px;
+}
+
+.content_choose_formats {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.formats {
+  background: var(--tag-background-color);
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+/*правая сторона*/
+
+.content_choosePhoto {
+  width: 542px;
+  height: 593px;
+  display: flex;
+  flex-direction: row;
+}
+
+.content_button_wrapper {
+  width: 430px;
+  height: 593px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.svg_button_pic {
+  width: 72px;
+  height: 72px;
+}
+
+.button_picture_download {
+  width: 430px;
+  height: 430px;
+  background-color: var(--button-backgound-color);
+  border-radius: 20px;
+}
+
+.content_down_button {
+  height: auto;
+  margin-top: 32px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button_choose_photo {
+  background-color: var(--button-small-backgound-color);
+  width: 430px;
+  height: 61px;
+  color: var(--text-color-small-button);
+  border-radius: 20px;
+}
+
+.svg_button_pic {
+  background: url(../img/computerUploadSVG.svg);
+}
+
+.instruction_text {
+  margin-top: 34px;
+  align-self: center;
+}
+
+/*шрифты*/
+.extra-bold-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 140%;
+}
+
+.extra-32-bold-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 140%;
+}
+
+.regular-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 180%;
+}
+
+.regular-16-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133.02%;
+}
+
+.regular-18-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133.02%;
+}
+
+.regular-20-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 133.02%;
+}
+
+.medium-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 29.09px;
+  line-height: 133.02%;
+}
+
+.medium-32-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 133.02%;
+}
+
+.medium-24-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133.02%;
+}
+
+.ligth-20-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 133.02%;
+}
+
+.grey-text-color {
+  color: var(--grey-text-color);
+}
+
+.black-text-color {
+  color: var(--text-color);
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.text-decoration-underline-border-bottom {
+  border-bottom: solid 0.5px;
+}

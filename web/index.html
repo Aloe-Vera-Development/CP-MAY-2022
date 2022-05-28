@@ -2,93 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=587b95ea-497d-4b53-aa19-755813434bed&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <script type="text/javascript" src="eel.js"></script>
     <title>Мой морж</title>
 </head>
 <body>
-    <h1>Loh</h1>
-    <canvas id="myChart" width="1000" height="600"></canvas>
-    <button type="button" onclick="getPathToFile()">Выбрать файл</button>
-    <div id="map" style="width: 600px; height: 400px"></div>
+    <header class="header">
+      <nav class="navigation">
+        <a href="./index.html" class="nav_link">Загрузить фото</a>
+        <a href="/" class="nav_link">Карта популяций</a>
+        <a href="/" class="nav_link">Статистика</a>
+        <a href="./history.html" class="nav_link">История отчетов</a>
+      </nav>
+      <div class="progammName">Мой морж</div>
+    </header>
+    <div class="wrapper">
+      <div class="content">
+        <div class="content_formats">
+          <div class="extra-bold-title mainTitle">
+            Загрузите изображения для анализа популяции
+          </div>
+          <div class="regular-title secondTitle">Можете загрузить 1 или более фотографий
+            в файловом формате JPEG или JPG</div>
+          <div class="content_choose_formats">
+          </div>
+        </div>
+      </div>
 
-    <script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['2019:09:17 15:21:43', '2019:09:18 15:21:43', '2019:09:20 15:21:43', ],
-            datasets: [{
-                label: 'Популяция моржей',
-                borderColor: 'rgb(75, 192, 192)',
-                backgroundColor: 'rgb(75, 192, 192)',
-                data: [1, 5, 3],
-                lineTension: 0.5
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-              filler: {
-                propagate: false,
-              },
-              title: {
-                display: true,
-              }
-            },
-            interaction: {
-              intersect: false,
-            }
-          },
-    });
-    myChart.canvas.parentNode.style.height = '1000px';
-    myChart.canvas.parentNode.style.width = '600px';
-    </script>
+      <div class="content_choosePhoto">
+        <div class="content_button_wrapper">
+          <button class="button_picture_download">
+            <svg class="svg_button_pic"></svg>
+          </button>
+          <div class="content_down_button">
+            <button class="button_choose_photo regular-title" onc>Выбрать фото</button>
+<!--            <p class="instruction_text regular-16-title">Либо просто перетащите файлы сюда</p>-->
+          </div>
+        </div>
+        <div class="arrow">
+          <svg class="arrow_pic"></svg>
+        </div>
+      </div>
+    </div>
 
-    <script type="text/javascript">
-        ymaps.ready(init);
-        var myMap;
-        function init(){
-            myMap = new ymaps.Map("map", {
-                center: [69.465028, 58.533478],
-                zoom: 12,
-                type: 'yandex#hybrid',
-                controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
-            });
-            eel.getLastData()(r => {
-                console.log(r)
-                var arr = [];
-                for (let i = 0; i < r.length; i++) {
-                    var title = '<b style="font-size: 18px">' + r[i][1] + ' моржей</b><br>Дата: ' + r[i][3].split(' ')[0].replaceAll(':', '.') + '<br>Снято на: ' + r[i][6] + '<br><a href="#">Детальная страница</a>';
-                    arr[i] = new ymaps.Placemark([r[i][4], r[i][5]], {
-                        clusterCaption: 'Фотография '+(i+1),
-                        balloonContent: title
-                    }, {
-                        preset: 'islands#blueCircleDotIcon',
-                    });
-                }
+<!--    <canvas id="myChart" width="1000" height="600"></canvas>-->
+<!--    <button type="button" onclick="getPathToFile()">Выбрать файл</button>-->
+<!--    <div id="map" style="width: 600px; height: 400px"></div>-->
 
-                var myClusterer = new ymaps.Clusterer();
-                myClusterer.add(arr);
-                myMap.geoObjects.add(myClusterer);
-            })
-        }
-        function getPathToFile() {
-            eel.addToDB()(r => {
-                console.log(r)
-                // var arr = new ymaps.GeoObjectCollection();
-                // for (let i = 0; i < r.length; i++) {
-                //     arr.add(new ymaps.Placemark([r[i][1], r[i][2]], {
-                //         balloonContent: r[i][0]
-                //     }, {
-                //         preset: 'islands#blueCircleDotIcon',
-                //     }));
-                //
-                // }
-                // myMap.geoObjects.add(arr);
-            })
-        }
-    </script>
+<!--    <script>-->
+<!--    const ctx = document.getElementById('myChart').getContext('2d');-->
+<!--    const myChart = new Chart(ctx, {-->
+<!--        type: 'line',-->
+<!--        data: {-->
+<!--            labels: ['2019:09:17 15:21:43', '2019:09:18 15:21:43', '2019:09:20 15:21:43', ],-->
+<!--            datasets: [{-->
+<!--                label: 'Популяция моржей',-->
+<!--                borderColor: 'rgb(75, 192, 192)',-->
+<!--                backgroundColor: 'rgb(75, 192, 192)',-->
+<!--                data: [1, 5, 3],-->
+<!--                lineTension: 0.5-->
+<!--            }]-->
+<!--        },-->
+<!--        options: {-->
+<!--            responsive: true,-->
+<!--            plugins: {-->
+<!--              filler: {-->
+<!--                propagate: false,-->
+<!--              },-->
+<!--              title: {-->
+<!--                display: true,-->
+<!--              }-->
+<!--            },-->
+<!--            interaction: {-->
+<!--              intersect: false,-->
+<!--            }-->
+<!--          },-->
+<!--    });-->
+<!--    myChart.canvas.parentNode.style.height = '1000px';-->
+<!--    myChart.canvas.parentNode.style.width = '600px';-->
+<!--    </script>-->
+
+<!--    <script type="text/javascript">-->
+<!--        ymaps.ready(init);-->
+<!--        var myMap;-->
+<!--        function init(){-->
+<!--            myMap = new ymaps.Map("map", {-->
+<!--                center: [69.465028, 58.533478],-->
+<!--                zoom: 12,-->
+<!--                type: 'yandex#hybrid',-->
+<!--                controls: ['zoomControl', 'typeSelector', 'fullscreenControl']-->
+<!--            });-->
+<!--            eel.getLastData()(r => {-->
+<!--                console.log(r)-->
+<!--                var arr = [];-->
+<!--                for (let i = 0; i < r.length; i++) {-->
+<!--                    var title = '<b style="font-size: 18px">' + r[i][1] + ' моржей</b><br>Дата: ' + r[i][3].split(' ')[0].replaceAll(':', '.') + '<br>Снято на: ' + r[i][6] + '<br><a href="#">Детальная страница</a>';-->
+<!--                    arr[i] = new ymaps.Placemark([r[i][4], r[i][5]], {-->
+<!--                        clusterCaption: 'Фотография '+(i+1),-->
+<!--                        balloonContent: title-->
+<!--                    }, {-->
+<!--                        preset: 'islands#blueCircleDotIcon',-->
+<!--                    });-->
+<!--                }-->
+
+<!--                var myClusterer = new ymaps.Clusterer();-->
+<!--                myClusterer.add(arr);-->
+<!--                myMap.geoObjects.add(myClusterer);-->
+<!--            })-->
+<!--        }-->
+<!--        function getPathToFile() {-->
+<!--            eel.addToDB()(r => {-->
+<!--                console.log(r)-->
+<!--                // var arr = new ymaps.GeoObjectCollection();-->
+<!--                // for (let i = 0; i < r.length; i++) {-->
+<!--                //     arr.add(new ymaps.Placemark([r[i][1], r[i][2]], {-->
+<!--                //         balloonContent: r[i][0]-->
+<!--                //     }, {-->
+<!--                //         preset: 'islands#blueCircleDotIcon',-->
+<!--                //     }));-->
+<!--                //-->
+<!--                // }-->
+<!--                // myMap.geoObjects.add(arr);-->
+<!--            })-->
+<!--        }-->
+<!--    </script>-->
 </body>
 </html>

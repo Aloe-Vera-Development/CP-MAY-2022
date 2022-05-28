@@ -1,0 +1,179 @@
+body{
+    background-color: pink;
+}
+
+:root{
+    --card-poin-background-color: white;
+    --button-color: #ECECEC;
+}
+
+
+.root {
+    background-color: var(--card-poin-background-color);
+    width: 812px;
+    height: 458px;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.close-cross{
+    margin-top: 24px;
+}
+
+.content{
+    padding: 61px 0px 0px 38px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 24px;
+}
+
+.content-left{
+    width: 261px;
+    margin-right: 86px;
+}
+
+.other-tags{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 48px;
+}
+
+.other-tags-child{
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.svg-div-other{
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.svg-pos{
+    width: inherit;
+    height: inherit;
+    background: url(../img/posSVG.svg);
+}
+
+.svg-date{
+    width: inherit;
+    height: inherit;
+    background: url(../img/dateSVG.svg);
+}
+
+.svg-cam{
+    width: inherit;
+    height: inherit;
+    background: url(../img/cameraSVG.svg);
+}
+
+.button{
+    width: inherit;
+    background-color: var(--button-color);
+    padding: 16px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.content-rigth{
+    border-radius: 20px;
+}
+
+.content-rigth img{
+    border-radius: inherit;
+}
+
+.close-cross{
+    width: 29.5px;
+    height: 28.5px;
+}
+
+.cross-svg{
+    width: inherit;
+    height: inherit;
+   background: url(../img/cross.svg)
+}
+
+
+
+
+
+.extra-bold-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 140%;
+}
+
+.semi-bold-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+}
+
+.regular-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 180%;
+}
+
+.regular-16-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133.02%;
+}
+
+.regular-18-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133.02%;
+}
+
+.regular-20-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 133.02%;
+}
+
+.medium-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 29.09px;
+  line-height: 133.02%;
+}
+
+.medium-32-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 133.02%;
+}
+
+.medium-24-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133.02%;
+}

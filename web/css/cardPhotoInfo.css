@@ -1,0 +1,158 @@
+:root {
+  --link-back-arrow-background-arrow: #f3f3f3;
+}
+
+.wrapper_info {
+  width: 1328px;
+  height: 653px;
+  margin: 114px 0px 0px 135px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.content_left {
+  height: inherit;
+  width: 947px;
+  margin-right: 66px;
+}
+
+.content-img {
+  margin-top: 52px;
+  width: inherit;
+  height: 531px;
+  border-radius: 32px;
+}
+
+.img-cont {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.div-link {
+  width: 56px;
+  height: 56px;
+  background-color: var(--link-back-arrow-background-arrow);
+  border-radius: 50%;
+  margin-right: 36px;
+}
+
+.arrov-back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.link-back {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-div {
+  width: 32px;
+  height: 32px;
+}
+
+.svg-back-link {
+  width: inherit;
+  height: inherit;
+  background-image: url(../img/arrow_png.png);
+}
+
+/*right*/
+
+.content_right {
+  width: 319px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+}
+
+.other-info {
+  margin-top: 72px;
+}
+
+.svg-div-other {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.svg-pos {
+  width: inherit;
+  height: inherit;
+  background: url(../img/posSVG.svg);
+}
+
+.svg-date {
+  width: inherit;
+  height: inherit;
+  background: url(../img/dateSVG.svg);
+}
+
+.pos-name {
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.input-field {
+  width: 269px;
+  height: 20px;
+}
+
+.svg-cam {
+  width: inherit;
+  height: inherit;
+  background: url(../img/cameraSVG.svg);
+}
+
+.other-info-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.buttons-wrapper {
+  margin-top: 58px;
+  width: inherit;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-photo {
+  width: inherit;
+  height: 61px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.button-share {
+  margin-top: 24px;
+}
+
+.disactivate {
+  display: none;
+}
+
+.input-field{
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+input[type="text"]
+{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 133.02%;
+  color: var(--text-color);
+  
+}
