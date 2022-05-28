@@ -128,20 +128,13 @@
                 $('.secondTitle').html('<span class="semi-bold-24-title">Нажмите на кнопку</span> под\n' +
                     '            списком фото и дождитесь результатов')
                 $('.button_choose_photo').text('Запустите анализ').attr('onclick', '')
-                $('.button_picture_download').html('<div class="main-photos">\n' +
-                    '              <div class="photos-img">\n' +
-                    '                <img src="/' + r[0].photo + '" alt="" class="img-photos" />\n' +
-                    '              </div>\n' +
-                    '              <div class="photos-img">\n' +
-                    '                <img src="' + r[1].photo + '" alt="" class="img-photos" />\n' +
-                    '              </div>\n' +
-                    '              <div class="photos-img">\n' +
-                    '                <img src="' + r[2]['photo'] + '" alt="" class="img-photos" />\n' +
-                    '              </div>\n' +
-                    '              <div class="photos-img">\n' +
-                    '                <img src="' + r[3]['photo'] + '" alt="" class="img-photos" />\n' +
-                    '              </div>\n' +
-                    '            </div>').attr('onclick', '')
+                var str = '<div class="main-photos">\n'
+                for (i = 0; i < r.length && i < 4; i++) {
+                    str = str + '<div class="photos-img">\n' +
+                    '                <img src="/' + r[i].photo + '" alt="" class="img-photos" />\n' +
+                    '              </div>\n'
+                }
+                $('.button_picture_download').html(str+'</div>').attr('onclick', '')
                 // var arr = new ymaps.GeoObjectCollection();
                 // for (let i = 0; i < r.length; i++) {
                 //     arr.add(new ymaps.Placemark([r[i][1], r[i][2]], {
