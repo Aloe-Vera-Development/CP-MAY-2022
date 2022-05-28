@@ -2,58 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9c57ffd-5500-4026-b4e6-badf0cc48104" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/cardPhotoInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/cardPoinMapDiv.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/cardPhotoInfo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/cardPointMap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/Inter-VariableFont_slnt,wght.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/fonts/Inter/static/Inter-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/historyCard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/upload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/history.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/1test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/Frame 43cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/PNG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/arrow-back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/arrow_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/bucket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/cameraSVG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/computerUploadSVG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/cross.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/crossCardSvg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/datePNG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/dateSVG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/devisePNG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/exitcrossPOPup.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/heroicons-outline_cameracards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/moresvg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/posSVG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/tabler_current-locationcards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/test2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/test3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/test4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/test6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/cardInfoPopUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/cardPhotoChangeLokation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/deletePhotoCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/uploadPhotos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CP-MAY-2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CP-MAY-2022.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/cardInfoPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/cardInfoPopUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/uploadPhotos.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/uploadPhotos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +62,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -141,7 +102,7 @@
       <workItem from="1653673803763" duration="21466000" />
       <workItem from="1653720515221" duration="117000" />
       <workItem from="1653753001354" duration="610000" />
-      <workItem from="1653753975208" duration="986000" />
+      <workItem from="1653753975208" duration="12979000" />
     </task>
     <servers />
   </component>
@@ -163,6 +124,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CP_MAY_2022$main.coverage" NAME="main Coverage Results" MODIFIED="1653754989215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CP_MAY_2022$main.coverage" NAME="main Coverage Results" MODIFIED="1653774871289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

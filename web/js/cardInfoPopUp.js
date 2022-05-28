@@ -18,7 +18,6 @@ popUpPhotos.forEach(element => {
 
 
 function togglePopUp() {
-    
     if (popUpWin.classList.contains('disctivate')) {
         popUpWin.classList.remove('disctivate');
         document.body.classList.add('shadow');

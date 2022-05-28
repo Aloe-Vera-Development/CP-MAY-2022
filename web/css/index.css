@@ -6,6 +6,7 @@
   --button-small-backgound-color: #000;
   --grey-text-color: #aeaeae;
   --pop-up-backgorund-color: white;
+  --different-text-color: #4DC800;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   padding: 0%s;
   font-family: 'Inter', sans-serif;
   color: var(--text-color);
+  overflow: hidden;
 }
 
 a {
@@ -22,28 +24,28 @@ a {
 
 button {
   border: none;
+  
 }
 
 /*хедере*/
 
-.header {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  width: auto;
-  align-items: center;
-  margin-top: 25px;
+.header{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin: 0px 250px 0px 135px;
+  margin-top: 25px;
+  margin-left: 125px;
+  /*margin: 0px 250px 0px 135px;*/
   padding: 0;
   min-width: 700px;
   max-width: 1000px;
   height: 29px;
+  justify-self: flex-start;
 }
 
 .nav_link {
@@ -63,8 +65,8 @@ button {
 .progammName {
   width: 167px;
   height: 45px;
-  left: 1296px;
-  top: 20px;
+  margin-top: 31px;
+  margin-left: 105px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -74,31 +76,31 @@ button {
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 160px 0px 0px 135px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.content{
+  margin-left: 125px;
+  margin-top: 135px;
 }
 
 /*левая сторона*/
-
-.content {
-  margin-right: 198px;
-}
-
 .content_formats {
-  width: 654px;
+  width: 580px;
   height: 341px;
+  margin-right: 100px;
 }
 
 .mainTitle {
-  width: 657px;
+  width: 700px;
   height: 140px;
 }
 
 .secondTitle {
   margin-top: 20px;
-  width: 508px;
+  width: inherit;
   height: 86px;
 }
 
@@ -106,7 +108,6 @@ button {
   margin-top: 56px;
   display: flex;
   flex-direction: row;
-  gap: 24px;
   align-items: flex-start;
 }
 
@@ -119,6 +120,7 @@ button {
 /*правая сторона*/
 
 .content_choosePhoto {
+  margin-right: 100px;
   width: 542px;
   height: 593px;
   display: flex;
@@ -143,6 +145,9 @@ button {
   height: 430px;
   background-color: var(--button-backgound-color);
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content_down_button {
@@ -154,12 +159,22 @@ button {
   justify-content: center;
 }
 
+.button_choose_photo:hover{
+  -webkit-box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
+-moz-box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
+box-shadow: 6px 6px 26px 0px rgba(0, 0, 0, 0.32);
+}
+
 .button_choose_photo {
   background-color: var(--button-small-backgound-color);
   width: 430px;
-  height: 61px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   color: var(--text-color-small-button);
+  text-align: center;
   border-radius: 20px;
+
+  transition: box-shadow ease-in-out 0.2s;
 }
 
 .svg_button_pic {
@@ -220,6 +235,22 @@ button {
   line-height: 133.02%;
 }
 
+.semi-bold-20-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 133.02%;
+}
+
+.semi-bold-24-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133.02%;
+}
+
 .medium-title {
   font-family: 'Inter';
   font-style: normal;
@@ -266,4 +297,13 @@ button {
 
 .text-decoration-underline-border-bottom {
   border-bottom: solid 0.5px;
+}
+
+
+.text-decoration-dashed{
+  text-decoration: dashed;
+}
+
+.secondTitle span{
+  color: var(--different-text-color);
 }
