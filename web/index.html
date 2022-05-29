@@ -120,13 +120,15 @@
         //         myMap.geoObjects.add(myClusterer);
         //     })
         // }
+        var suka = []
         function getPathToFile() {
             eel.addToDB()(r => {
+                suka = r
                 console.log(r)
                 $('.mainTitle').text('Отлично! Осталось запустить анализ')
                 $('.secondTitle').html('<span class="semi-bold-24-title">Нажмите на кнопку</span> под\n' +
                     '            списком фото и дождитесь результатов')
-                $('.button_choose_photo').text('Запустите анализ').attr('onclick', '')
+                $('.button_choose_photo').text('Запустите анализ').attr('onclick', 'getPrediction()')
                 var str = '<div class="main-photos">\n'
                 for (i = 0; i < r.length && i < 4; i++) {
                     str = str + '<div class="photos-img">\n' +
@@ -145,6 +147,14 @@
                 // }
                 // myMap.geoObjects.add(arr);
             })
+        }
+        function getPrediction() {
+            console.log(suka)
+            for (i = 0; i < suka.length; i++) {
+                eel.getPrediction('web/'+suka[i].photo, suka[i].date)(r => {
+                    console.log(r)
+                })
+            }
         }
     </script>
 </body>

@@ -88,6 +88,16 @@ def addData(data):
         initDatas()
         addData(data)
 
+def updateData(id, n):
+    try:
+        conn = connectToDB()
+        c = conn.cursor()
+        c.execute("UPDATE datas SET n='" + n + "' WHERE date='" + id + "'")
+        conn.commit()
+    except:
+        initDatas()
+        updateData(id, n)
+
 
 def addRookery(name):
     try:
@@ -179,13 +189,18 @@ def getLastData():
     print(datas)
     return datas
 
+
 model = ''
+
+
 @eel.expose
-def getPrediction():
+def getPrediction(img_name, id):
     print("predictionStart")
     model = Predictor('model/model32000.weights')
-    img_name = 'model/test.jpg'
-    print(model.predict(img_name))
+    pred = model.predict(img_name)
+    print(pred)
+    updateData(id, str(pred))
+    return pred
 
 
 @eel.expose
