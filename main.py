@@ -6,6 +6,7 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 from GPSPhoto import gpsphoto
 import sqlite3
+from model.nn import Predictor
 
 eel.init('web')
 
@@ -177,6 +178,14 @@ def getLastData():
     datas = getAllData()
     print(datas)
     return datas
+
+model = ''
+@eel.expose
+def getPrediction():
+    print("predictionStart")
+    model = Predictor('model/model32000.weights')
+    img_name = 'model/test.jpg'
+    print(model.predict(img_name))
 
 # addRookery('Крутое лежбище')
 #
