@@ -63,16 +63,16 @@ def getAllData(last=50):
         getAllData()
 
 
-def getDataById(id):
+def getById(id):
     try:
         conn = connectToDB()
         c = conn.cursor()
-        recs = c.execute("SELECT * FROM datas WHERE id='" + id + "'")
+        recs = c.execute("SELECT * FROM datas WHERE id=" + id)
         for row in recs:
-            print(row)
+            return row
     except:
         initDatas()
-        getAllData(id)
+        getById(id)
 
 
 def addData(data):
@@ -177,6 +177,12 @@ def getLastData():
     datas = getAllData()
     print(datas)
     return datas
+
+
+@eel.expose
+def getDataById(id):
+    data = getById(id)
+    return data
 
 # addRookery('Крутое лежбище')
 #

@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hacaton-Nenetskie-Morsgi</title>
+    <title></title>
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/cardPhotoInfo.css">
+    <script type="text/javascript" src="eel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -24,8 +26,7 @@
       <div class="content_left">
         <div class="backToLibrar">
           <div class="arrov-back">
-            <div class="div-link"><a href="/" class="link-back"><div class="svg-div"><svg class="svg-back-link"></svg></div></a></div>
-            <div class="text extra-bold-title">На фото 140 моржей</div>
+            <div class="text extra-bold-title"></div>
           </div>
         </div>
         <div class="content-img">
@@ -61,5 +62,12 @@
     </div>
     
     <script src="./js/cardPhotoChangeLokation.js" defer></script>
+    <script type="text/javascript">
+      console.log(window.location.href)
+      eel.getDataById('1')(r => {
+        console.log(r)
+        $('.extra-bold-title').text('На фото ' + r[1] + ' моржей')
+      })
+    </script>
   </body>
 </html>
