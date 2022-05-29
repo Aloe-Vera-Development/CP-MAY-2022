@@ -64,16 +64,16 @@ def getAllData(last=50):
         getAllData()
 
 
-def getDataById(id):
+def getById(id):
     try:
         conn = connectToDB()
         c = conn.cursor()
-        recs = c.execute("SELECT * FROM datas WHERE id='" + id + "'")
+        recs = c.execute("SELECT * FROM datas WHERE id=" + id)
         for row in recs:
-            print(row)
+            return row
     except:
         initDatas()
-        getAllData(id)
+        getById(id)
 
 
 def addData(data):
@@ -186,6 +186,13 @@ def getPrediction():
     model = Predictor('model/model32000.weights')
     img_name = 'model/test.jpg'
     print(model.predict(img_name))
+
+
+@eel.expose
+def getDataById(id):
+    data = getById(id)
+    return data
+
 
 # addRookery('Крутое лежбище')
 #
