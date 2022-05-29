@@ -1,0 +1,9 @@
+eel
+pillow
+torch
+tkinter
+GPSPhoto
+sqlite3
+torch
+torchvision
+numpy
