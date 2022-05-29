@@ -1,0 +1,59 @@
+.diagram1_area{
+    background-color: #F9F9F9;
+    width: 712px;
+    height: 549px;
+    padding-top: 117px;
+    padding-left: 135px;
+    border-radius: 18px;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 117px;
+    padding-left: 135px;
+}
+
+.add_lesbishe{
+    background-color: #F3F3F3;
+    background-image: url(../img/plus.svg);
+    background-position:center;
+    height: 45px;
+    width: 45px;
+    border-radius: 16px;
+
+}
+
+.diagram2_area{
+    background-color: #F9F9F9;
+    width: 600px;
+    height: 333px;
+    border-radius: 20px;
+
+}
+
+.diagram2{
+    padding-left: 30px;
+}
+
+#grey_text{
+    color:#7D7D7D;
+    font-size: 19px;
+}
+
+#lesbishe1{
+    margin-left: 16px;
+}
+
+
+
+.content{
+   width: 1000px;
+   margin: 0 auto;
+   zoom: 0.67;
+}
+
+body {
+    overflow: scroll;
+  }
