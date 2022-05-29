@@ -22,8 +22,7 @@
   background-color: var(--button-hover-color-card-more);
 }
 
-
-.more-photos{
+.more-photos {
   position: absolute;
   width: inherit;
   height: inherit;
@@ -57,6 +56,17 @@
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: rgba(110, 110, 110, 0.4);
+  width: 6px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  background-color: rgba(177, 177, 177, 0.3);
+  width: 6px;
+  border-radius: 5px;
+}
 
 .card-photo {
   background-color: var(--card-photo-backgorund-color);
@@ -132,7 +142,7 @@
   align-items: center;
 }
 
-.content2{
+.content2 {
   margin-top: 0px;
 }
 
@@ -141,7 +151,7 @@
 .pop-up-wrapper {
   position: absolute;
   top: 140px;
-  left:  90px;
+  left: 90px;
   width: 1326px;
   height: 658px;
   background-color: var(--pop-up-backgorund-color);
@@ -156,11 +166,11 @@
   justify-content: space-between;
 }
 
-.down-text span:hover{
+.down-text span:hover {
   color: var(--different-text-color);
 }
 
-.down-text{
+.down-text {
   margin-top: 35px;
   width: inherit;
   text-align: center;
@@ -182,13 +192,13 @@
   height: 45px;
 }
 
-.text-wrapper{
+.text-wrapper {
   display: flex;
   flex-direction: row;
   width: 595.5px;
   height: 160px;
   justify-content: start;
-  align-items: baseline
+  align-items: baseline;
 }
 
 .button-exit-cross {
@@ -278,7 +288,10 @@
 
 .card-img {
   height: inherit;
-  border-radius: 20px;
+}
+
+.img-card {
+  border-radius: 20px 0px 0px 20px;
 }
 
 .shadow {
@@ -295,7 +308,12 @@
 }
 
 .date {
+  width: 100px;
+  height: 21px;
   margin-top: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .left-div {
@@ -311,7 +329,6 @@
 .more-svg-div {
   width: 48px;
   height: 48px;
-  
 }
 
 .more:hover {
@@ -350,13 +367,20 @@
   background: url(../img/crossCardSvg.svg);
 }
 
-
-.white-text-color{
+.white-text-color {
   color: white;
 }
 
-.more-photos{
+.more-photos {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper3 {
+  margin-top: 100px;
+}
+
+.text-marg-left {
+  margin-left: 125px;
 }

@@ -56,7 +56,6 @@
     justify-content: center;
 }
 
-
 .active-more-photos{
     display: flex;
 }
@@ -72,4 +71,8 @@
 
 .arrow span:hover{
     color: var(--different-text-color);
+}
+
+.content_left{
+    padding-left: 125px;
 }

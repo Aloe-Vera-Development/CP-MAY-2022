@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacaton-Nenetskie-Morsgi</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=587b95ea-497d-4b53-aa19-755813434bed&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript" src="eel.js"></script>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/upload.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <a href="index.html" class="nav_link regular-16-title">Загрузить фото</a>
+        <a href="map.html" class="nav_link text-decoration-underline regular-16-title">Карта популяций</a>
+        <a href="/" class="nav_link regular-16-title">Статистика</a>
+        <a href="history.html" class="nav_link regular-16-title">История отчетов</a>
+      </nav>
+      <div class="progammName semi-bold-20-title">Мой морж</div>
+    </header>
+    <div class="wrapper">
+      <div class="content content2">
+        <div class="extra-bold-title mainTitle">Карта лежбищ</div>
+        <div id="map" style="width: 1000px;height: 600px;"></div>
+      </div>
+    </div>
+
+
+      <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap;
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [69.465028, 58.533478],
+                zoom: 12,
+                type: 'yandex#hybrid',
+                controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
+            });
+            eel.getLastData()(r => {
+                console.log(r)
+                var arr = [];
+                for (let i = 0; i < r.length; i++) {
+                    var title = '<b style="font-size: 18px">' + r[i][1] + ' моржей</b><br>Дата: ' + r[i][3].split(' ')[0].replaceAll(':', '.') + '<br>Снято на: ' + r[i][6];
+                    arr[i] = new ymaps.Placemark([r[i][4], r[i][5]], {
+                        clusterCaption: 'Фотография '+(i+1),
+                        balloonContent: title
+                    }, {
+                        preset: 'islands#blueCircleDotIcon',
+                    });
+                }
+
+                var myClusterer = new ymaps.Clusterer();
+                myClusterer.add(arr);
+                myMap.geoObjects.add(myClusterer);
+            })
+        }
+    </script>
+  </body>
+</html>

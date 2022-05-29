@@ -15,10 +15,10 @@
   <body>
     <header class="header">
       <nav class="navigation">
-        <a href="index.html" class="nav_link regular-16-title">Загрузить фото</a>
-        <a href="/" class="nav_link regular-16-title">Карта популяций</a>
+        <a href="index.html" class="nav_link text-decoration-underline regular-16-title">Загрузить фото</a>
+        <a href="map.html" class="nav_link regular-16-title">Карта популяций</a>
         <a href="/" class="nav_link regular-16-title">Статистика</a>
-        <a href="history.html" class="nav_link  text-decoration-underline regular-16-title">История отчетов</a>
+        <a href="history.html" class="nav_link text-decoration-underline regular-16-title">История отчетов</a>
       </nav>
       <div class="progammName semi-bold-20-title">Мой морж</div>
     </header>
@@ -49,11 +49,11 @@
 
       <div class="content_choosePhoto">
         <div class="content_button_wrapper">
-          <a href="./index2.html" class="button_picture_download">
+          <a href="#" onclick="getPathToFile()" class="button_picture_download">
             <svg class="svg_button_pic"></svg>
           </a>
           <div class="content_down_button">
-            <a href="./index2.html" class="button_choose_photo button_choose_photo_hover regular-title">
+            <a href="#" onclick="getPathToFile()" class="button_choose_photo  button_choose_photo_hover regular-title">
               Выбрать фото
             </a>
           </div>
@@ -72,7 +72,7 @@
           for (i = 0; i < r.length; i++) {
             str += '                    <div class="card-photo">\n' +
                     '            <div class="card-img">\n' +
-                    '              <img src="' + r[i][2] + '" alt="" class="img-card" />\n' +
+                    '              <img src="' + r[i][2] + '" alt="" class="img-card" width="160px" height="160px" />\n' +
                     '            </div>\n' +
                     '            <div class="photo-info">\n' +
                     '              <div class="text medium-24-title">' + r[i][1] + ' моржей</div>\n' +
